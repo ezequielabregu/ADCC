@@ -74,7 +74,7 @@ Utiliza este esquema como referencia para conectar correctamente los potencióme
    - Para un controlador con 3 botones: `MIDI_CONTROLLER_(3_buttons).ino`.
    - Para un controlador con 3 potenciómetros y 3 botones: `MIDI_CONTROLLER_(3_pots_3_buttons).ino`.
 2. Conecta tu placa Arduino al ordenador mediante un cable USB.
-3. Selecciona el puerto USB de tu placa en **Herramientas > Puerto**.
+3. Selecciona el puerto USB de tu placa en **Herramientas > Puerto**. Habitualmente seleccionaremos *Arduino Leonardo*.
 4. Haz clic en el botón de **Subir** para cargar el código en la placa.
 
 ---
