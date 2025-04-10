@@ -24,7 +24,7 @@ El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a
 ## Paso 1: Instalación del Entorno de Desarrollo
 
 1. Descarga e instala el **Arduino IDE** desde el enlace proporcionado.
-2. Abre el Arduino IDE y ve a **Herramientas > Placa**. Selecciona tu placa Arduino (Leonardo, Micro o Pro Micro).
+2. Abre el Arduino IDE y ve a **Herramientas > Placa**. Selecciona tu placa Arduino (Leonardo, Micro o Pro Micro). Habitualmente seleccionaremos *Arduino Leonardo*.
 3. Instala la librería MIDIUSB:
    - Ve a **Herramientas > Administrar bibliotecas**.
    - Busca "MIDIUSB" en el cuadro de búsqueda.
