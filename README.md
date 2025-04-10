@@ -3,6 +3,8 @@
 Este documento describe paso a paso cómo implementar un controlador MIDI utilizando una placa Arduino basada en el chip ATmega32U4 (Leonardo, Micro o Pro Micro).
 Este controlador MIDI puede enviar mensajes MIDI a través de USB, permitiendo controlar software musical o dispositivos compatibles con MIDI.
 
+El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a su capacidad integrada de comunicación USB nativa, lo que elimina la necesidad de chips adicionales para la interfaz USB. Esto permite que las placas basadas en este chip, como Arduino Leonardo, Micro y Pro Micro, sean reconocidas directamente como dispositivos MIDI por el sistema operativo, simplificando la implementación. Además, su soporte para múltiples pines analógicos y digitales facilita la conexión de potenciómetros, botones y otros componentes, mientras que su compatibilidad con el entorno Arduino IDE y librerías como MIDIUSB agiliza el desarrollo y personalización del código.
+
 ## Requisitos
 
 ### Hardware
@@ -43,10 +45,25 @@ Los botones se conectan a los pines digitales de la placa Arduino. Cada botón t
 - **Un pin**: Conéctalo al pin digital correspondiente (2, 3, 4, etc.).
 - **Otro pin**: Conéctalo a GND.
 
-Consulta las imágenes en la carpeta `images` para esquemas detallados:
-- **Esquema básico con 1 potenciómetro y 1 botón**: `images/Basic MIDI Controller (1 Pot - 1 Button).png`.
-- **Esquema con 3 potenciómetros y 3 botones**: `images/Basic MIDI Controller (3 Pot - 3 Button).png`.
-- **Pinout del Arduino Pro Micro**: `images/arduino_ProMicro_pinout.jpg`.
+## Esquema de Conexión Detallado
+
+A continuación, se muestran los esquemas de conexión para diferentes configuraciones de potenciómetros y botones.
+
+### Esquema básico con 1 potenciómetro y 1 botón
+![Esquema básico con 1 potenciómetro y 1 botón](/ARDUINO_MIDI_CONTROLLER/images/1%20Pot-1%20Button.png)
+
+### Esquema con 3 potenciómetros y 3 botones
+![Esquema con 3 potenciómetros y 3 botones](/ARDUINO_MIDI_CONTROLLER/images/3%20Pot-3%20Button.png)
+
+---
+
+## Pinout del Arduino Pro Micro
+
+El siguiente esquema muestra el pinout del Arduino Pro Micro, útil para identificar los pines analógicos y digitales necesarios para las conexiones.
+
+![Pinout del Arduino Pro Micro](/ARDUINO_MIDI_CONTROLLER/images/arduino_ProMicro_pinout.jpg)
+
+Utiliza este esquema como referencia para conectar correctamente los potenciómetros y botones a los pines de la placa.
 
 ---
 
@@ -64,9 +81,9 @@ Consulta las imágenes en la carpeta `images` para esquemas detallados:
 
 ## Paso 4: Pruebas y Depuración
 
-1. Abre el **Monitor Serial** en el Arduino IDE para verificar los mensajes de depuración.
+1. Abre el **Monitor Serial** (menú *Herramientas/Monitor Serial*) en el Arduino IDE para verificar los mensajes de depuración.
 2. Gira los potenciómetros o presiona los botones y observa los mensajes enviados al monitor serial.
-3. Conecta tu Arduino a un software MIDI (como Ableton Live, FL Studio o cualquier otro compatible) para probar el envío de mensajes MIDI.
+3. Conecta tu Arduino a un software MIDI (MIDI monitor, Ableton Live, FL Studio o cualquier otro compatible) para probar el envío de mensajes MIDI.
 
 ---
 
@@ -78,26 +95,6 @@ Puedes personalizar el código para adaptarlo a tus necesidades:
 - Ajusta el umbral de sensibilidad (`potThreshold`) para los potenciómetros.
 
 ---
-## Esquema de Conexión Detallado
-
-A continuación, se muestran los esquemas de conexión para diferentes configuraciones de potenciómetros y botones. Estas imágenes están disponibles en la carpeta `images` del proyecto.
-
-### Esquema básico con 1 potenciómetro y 1 botón
-![Esquema básico con 1 potenciómetro y 1 botón](/ARDUINO_MIDI_CONTROLLER/images/1%20Pot-1%20Button.png)
-
-### Esquema con 3 potenciómetros y 3 botones
-![Esquema con 3 potenciómetros y 3 botones](/ARDUINO_MIDI_CONTROLLER/images/3%20Pot-3%20Button.png)
-
----
-
-## Paso 2.2: Pinout del Arduino Pro Micro
-
-El siguiente esquema muestra el pinout del Arduino Pro Micro, útil para identificar los pines analógicos y digitales necesarios para las conexiones.
-
-![Pinout del Arduino Pro Micro](/ARDUINO_MIDI_CONTROLLER/images/arduino_ProMicro_pinout.jpg)
-
-Utiliza este esquema como referencia para conectar correctamente los potenciómetros y botones a los pines de la placa.
-
 ## Recursos Adicionales
 
 - [Documentación oficial de Arduino](https://www.arduino.cc/).
