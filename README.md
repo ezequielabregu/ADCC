@@ -9,9 +9,9 @@ El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a
 
 ### Hardware
 1. **Placa Arduino**: Leonardo, Micro o Pro Micro (chip ATmega32U4).
-2. **Potenciómetros**: Dependiendo del modelo que elijas (1, 3 o más).
-3. **Botones pulsadores**: Según el modelo (1, 3 o más).
-4. **Cables de conexión**: Para realizar las conexiones entre los componentes y la placa.
+2. **Potenciómetros lineales de 10k ohms (B10k)**: Dependiendo del modelo que elijas (1, 3 o más).
+3. **Botones pulsadores sin retención**: Según el modelo (1, 3 o más).
+4. **Cables de conexión (tipo Dupont)**: Para realizar las conexiones entre los componentes y la placa.
 5. **Protoboard**: Opcional, para facilitar las conexiones.
 6. **Cable USB**: Para conectar la placa Arduino al ordenador.
 
