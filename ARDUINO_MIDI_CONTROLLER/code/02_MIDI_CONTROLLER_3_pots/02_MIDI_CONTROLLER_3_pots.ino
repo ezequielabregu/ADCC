@@ -1,10 +1,15 @@
 #include "MIDIUSB.h"
 
-const int N_POTS = 3; // Number of potentiometers
+//-------------------------------------------------------
+//SETUP
+// Number of potentiometers
+const int N_POTS = 3; 
+// Arduino analog pins for potentiometers
+int potPin[N_POTS] = {A0, A1, A2};
+// MIDI CC numbers for each potentiometer 
+int potCC[N_POTS] = {1, 2, 3}; 
 
-int potPin[N_POTS] = {A0, A1, A2}; // Analog pins for potentiometers
-int potCC[N_POTS] = {1, 2, 3}; // MIDI CC numbers for each potentiometer
-
+//-----------------------------------------------------
 int potState[N_POTS]= {0};
 int potPState[N_POTS] = {0};
 
