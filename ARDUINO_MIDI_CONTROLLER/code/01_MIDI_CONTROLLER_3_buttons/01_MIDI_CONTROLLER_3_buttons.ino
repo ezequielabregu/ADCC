@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 //SETUP
 // Number of buttons
-const int N_BUTTONS = 3; // Number of buttons
+const int N_BUTTONS = 3; 
 // Number of the Arduino pins for the buttons
 int buttonPin[N_BUTTONS] = { 2, 3, 4};
 // the MIDI note number for each button 
