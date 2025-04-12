@@ -124,7 +124,7 @@ int buttonNote[N_BUTTONS] = { 36, 37, 38 };
 
 ### 2. Configuración de Potenciómetros (`PotsConfig.h`)
 
-El archivo PotsConfig.h se utiliza para definir los parámetros relacionados con los potenciómetros del controlador MIDI. Puedes modificar los siguientes valores:
+El archivo `PotsConfig.h` se utiliza para definir los parámetros relacionados con los potenciómetros del controlador MIDI. Puedes modificar los siguientes valores:
 
 Número de potenciómetros: Define cuántos potenciómetros tendrá tu controlador.
 Pines analógicos de Arduino para los potenciómetros: Especifica los pines analógicos de Arduino a los que están conectados los potenciómetros.
@@ -142,7 +142,7 @@ int potCC[N_POTS] = { 1, 2, 3 };
 
 ### 3. Configuración Combinada (`Config.h`)
 
-El archivo Config.h combina la configuración de botones y potenciómetros en un solo archivo para proyectos que utilizan ambos elementos. Puedes modificar los mismos parámetros que en los archivos anteriores:
+El archivo `Config.h` combina la configuración de botones y potenciómetros en un solo archivo para proyectos que utilizan ambos elementos. Puedes modificar los mismos parámetros que en los archivos anteriores:
 
 Botones:
 
