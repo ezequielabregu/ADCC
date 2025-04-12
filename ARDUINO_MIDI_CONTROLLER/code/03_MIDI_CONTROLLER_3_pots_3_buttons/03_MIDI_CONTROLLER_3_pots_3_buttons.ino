@@ -13,8 +13,6 @@ unsigned long lastDebounceTime[N_BUTTONS] = { 0 }; // Store the last time the LE
 unsigned long debounceTimer[N_BUTTONS] = { 0 }; // the debounce time; increase if the output flickers
 int debounceDelay = 10; // the debounce time; increase if the output flickers
 
-int BUTTON_CH = 0;
-
 //-------------------------------------------------------
 // POTENTIOMETERS
 
@@ -27,8 +25,6 @@ int midiPState[N_POTS] = {0};
 byte potThreshold = 3; // Threshold for detecting changes
 
 //int potReading[N_POTS] = {0};
-
-byte POT_CH = 0; // MIDI channel for the potentiometers
 
 // Functions to send MIDI messages (USBMIDI library)
 void noteOn(byte channel, byte pitch, byte velocity) {

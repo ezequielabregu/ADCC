@@ -12,8 +12,6 @@ byte potThreshold = 3; // Threshold for detecting changes
 
 //int potReading[N_POTS] = {0};
 
-byte POT_CH = 0; // MIDI channel for the potentiometers
-
 // Function to send MIDI control change messages (USBMIDI library)
 void controlChange(byte channel, byte control, byte value) {
   midiEventPacket_t event = {0x0B, 0xB0 | channel, control, value};

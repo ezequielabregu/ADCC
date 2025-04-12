@@ -9,8 +9,6 @@ unsigned long lastDebounceTime[N_BUTTONS] = { 0 }; // Store the last time the LE
 unsigned long debounceTimer[N_BUTTONS] = { 0 }; // the debounce time; increase if the output flickers
 int debounceDelay = 10; // the debounce time; increase if the output flickers
 
-int BUTTON_CH = 0;
-
 void noteOn(byte channel, byte pitch, byte velocity) {
   midiEventPacket_t noteOn = {0x09, 0x90 | channel, pitch, velocity};
   MidiUSB.sendMIDI(noteOn);
