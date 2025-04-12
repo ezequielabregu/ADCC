@@ -8,6 +8,7 @@ El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a
 ## Requisitos
 
 ### Hardware
+
 1. **Placa Arduino**: Leonardo, Micro o Pro Micro (chip ATmega32U4).
 2. **Potenciómetros lineales de 10k ohms (B10k)**: Dependiendo del modelo que elijas (1, 3 o más).
 3. **Botones pulsadores sin retención**: Según el modelo (1, 3 o más).
@@ -16,6 +17,7 @@ El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a
 6. **Cable USB**: Para conectar la placa Arduino al ordenador.
 
 ### Software
+
 1. **Arduino IDE**: Descárgalo desde [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
 2. **Librería MIDIUSB** (Gary Grewal): Necesaria para enviar mensajes MIDI a través de USB.
 
@@ -35,13 +37,17 @@ El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a
 ## Paso 2: Esquema de Conexión
 
 ### Potenciómetros
+
 Los potenciómetros se conectan a los pines analógicos de la placa Arduino. Cada potenciómetro tiene tres pines:
+
 - **Pin central**: Conéctalo al pin analógico correspondiente (A0, A1, A2, etc.).
 - **Pin lateral 1**: Conéctalo a GND.
 - **Pin lateral 2**: Conéctalo a 5V.
 
 ### Botones
+
 Los botones se conectan a los pines digitales de la placa Arduino. Cada botón tiene dos pines:
+
 - **Un pin**: Conéctalo al pin digital correspondiente (2, 3, 4, etc.).
 - **Otro pin**: Conéctalo a GND.
 
@@ -50,9 +56,11 @@ Los botones se conectan a los pines digitales de la placa Arduino. Cada botón t
 A continuación, se muestran los esquemas de conexión para diferentes configuraciones de potenciómetros y botones.
 
 ### Esquema básico con 1 potenciómetro y 1 botón
+
 ![Esquema básico con 1 potenciómetro y 1 botón](/ARDUINO_MIDI_CONTROLLER/images/1%20Pot-1%20Button.png)
 
 ### Esquema con 3 potenciómetros y 3 botones
+
 ![Esquema con 3 potenciómetros y 3 botones](/ARDUINO_MIDI_CONTROLLER/images/3%20Pot-3%20Button.png)
 
 ---
@@ -104,6 +112,7 @@ El archivo `ButtonsConfig.h` se utiliza para definir los parámetros relacionado
 - **Notas MIDI para cada botón**: Asigna un número de nota MIDI a cada botón.
 
 Ejemplo de configuración:
+
 ```cpp
 // Número de botones
 const int N_BUTTONS = 3; 
@@ -114,12 +123,14 @@ int buttonNote[N_BUTTONS] = { 36, 37, 38 };
 ```
 
 ### 2. Configuración de Potenciómetros (PotsConfig.h)
+
 El archivo PotsConfig.h se utiliza para definir los parámetros relacionados con los potenciómetros del controlador MIDI. Puedes modificar los siguientes valores:
 
 Número de potenciómetros: Define cuántos potenciómetros tendrá tu controlador.
 Pines analógicos de Arduino para los potenciómetros: Especifica los pines analógicos de Arduino a los que están conectados los potenciómetros.
 Números de Control Change (CC) MIDI para cada potenciómetro: Asigna un número de CC MIDI a cada potenciómetro.
 Ejemplo de configuración:
+
 ```cpp
 // Número de potenciómetros
 const int N_POTS = 3; 
@@ -130,6 +141,7 @@ int potCC[N_POTS] = { 1, 2, 3 };
 ```
 
 ### 3. Configuración Combinada (Config.h)
+
 El archivo Config.h combina la configuración de botones y potenciómetros en un solo archivo para proyectos que utilizan ambos elementos. Puedes modificar los mismos parámetros que en los archivos anteriores:
 
 Botones:
@@ -159,8 +171,8 @@ int potCC[N_POTS] = { 1, 2, 3 };
 ```
 
 ---
+
 ## Recursos Adicionales
 
 - [Documentación oficial de Arduino](https://www.arduino.cc/).
 - [Referencia de la librería MIDIUSB](https://www.arduino.cc/reference/en/libraries/midiusb/).
-
