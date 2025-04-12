@@ -2,13 +2,9 @@
 // MIDI Controller with Buttons and Potentiometers
 // This code is a simple MIDI controller that uses buttons and potentiometers
 #include <MIDIUSB.h>
+#include "Config.h"
 
 //-------------------------------------------------------
-// BUTTONS
-const int N_BUTTONS = 3; // Number of buttons
-
-int buttonPin[N_BUTTONS] = { 2, 3, 4}; // the number of the pushbutton pin
-int buttonNote[N_BUTTONS] = { 36, 37, 38}; // the note number for each button
 
 int buttonState[N_BUTTONS] = { 0 }; // Variable for reading the pushbutton status
 int buttonPState[N_BUTTONS] = { 0 }; // Variable for reading the pushbutton status
@@ -21,11 +17,6 @@ int BUTTON_CH = 0;
 
 //-------------------------------------------------------
 // POTENTIOMETERS
-
-const int N_POTS = 3; // Number of potentiometers
-
-int potPin[N_POTS] = {A0, A1, A2}; // Analog pins for potentiometers
-int potCC[N_POTS] = {1, 2, 3}; // MIDI CC numbers for each potentiometer
 
 int potState[N_POTS]= {0};
 int potPState[N_POTS] = {0};

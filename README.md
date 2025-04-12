@@ -89,10 +89,74 @@ Utiliza este esquema como referencia para conectar correctamente los potencióme
 
 ## Paso 5: Personalización
 
-Puedes personalizar el código para adaptarlo a tus necesidades:
-- Cambia los pines asignados a los potenciómetros o botones.
-- Modifica los números de Control Change (CC) o notas MIDI asignadas.
-- Ajusta el umbral de sensibilidad (`potThreshold`) para los potenciómetros.
+## Configuración del Controlador MIDI
+
+Este proyecto permite configurar fácilmente el número de botones, potenciómetros, los pines de Arduino asociados y los valores MIDI correspondientes mediante archivos de configuración. A continuación, se explica cómo realizar estas configuraciones utilizando los archivos `Config.h`, `ButtonsConfig.h` y `PotsConfig.h`.
+
+---
+
+### 1. Configuración de Botones (`ButtonsConfig.h`)
+
+El archivo `ButtonsConfig.h` se utiliza para definir los parámetros relacionados con los botones del controlador MIDI. Puedes modificar los siguientes valores:
+
+- **Número de botones**: Define cuántos botones tendrá tu controlador.
+- **Pines de Arduino para los botones**: Especifica los pines digitales de Arduino a los que están conectados los botones.
+- **Notas MIDI para cada botón**: Asigna un número de nota MIDI a cada botón.
+
+Ejemplo de configuración:
+```cpp
+// Número de botones
+const int N_BUTTONS = 3; 
+// Pines de Arduino para los botones
+int buttonPin[N_BUTTONS] = { 2, 3, 4 };
+// Notas MIDI para cada botón
+int buttonNote[N_BUTTONS] = { 36, 37, 38 };
+```
+
+### 2. Configuración de Potenciómetros (PotsConfig.h)
+El archivo PotsConfig.h se utiliza para definir los parámetros relacionados con los potenciómetros del controlador MIDI. Puedes modificar los siguientes valores:
+
+Número de potenciómetros: Define cuántos potenciómetros tendrá tu controlador.
+Pines analógicos de Arduino para los potenciómetros: Especifica los pines analógicos de Arduino a los que están conectados los potenciómetros.
+Números de Control Change (CC) MIDI para cada potenciómetro: Asigna un número de CC MIDI a cada potenciómetro.
+Ejemplo de configuración:
+```cpp
+// Número de potenciómetros
+const int N_POTS = 3; 
+// Pines analógicos de Arduino para los potenciómetros
+int potPin[N_POTS] = { A0, A1, A2 };
+// Números de CC MIDI para cada potenciómetro
+int potCC[N_POTS] = { 1, 2, 3 };
+```
+
+### 3. Configuración Combinada (Config.h)
+El archivo Config.h combina la configuración de botones y potenciómetros en un solo archivo para proyectos que utilizan ambos elementos. Puedes modificar los mismos parámetros que en los archivos anteriores:
+
+Botones:
+
+- Número de botones.
+- Pines de Arduino para los botones.
+- Notas MIDI para cada botón.
+
+Potenciómetros:
+
+- Número de potenciómetros.
+- Pines analógicos de Arduino para los potenciómetros.
+- Números de CC MIDI para cada potenciómetro.
+
+Ejemplo de configuración:
+
+```C++
+// Botones
+const int N_BUTTONS = 3; 
+int buttonPin[N_BUTTONS] = { 2, 3, 4 };
+int buttonNote[N_BUTTONS] = { 36, 37, 38 };
+
+// Potenciómetros
+const int N_POTS = 3; 
+int potPin[N_POTS] = { A0, A1, A2 };
+int potCC[N_POTS] = { 1, 2, 3 };
+```
 
 ---
 ## Recursos Adicionales

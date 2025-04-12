@@ -1,14 +1,6 @@
 #include <MIDIUSB.h>
-
+#include "ButtonsConfig.h"
 //-------------------------------------------------------
-//SETUP
-// Number of buttons
-const int N_BUTTONS = 3; 
-// Number of the Arduino pins for the buttons
-int buttonPin[N_BUTTONS] = { 2, 3, 4};
-// the MIDI note number for each button 
-int buttonNote[N_BUTTONS] = { 36, 37, 38}; 
-//-------------------------------------
 
 int buttonState[N_BUTTONS] = { 0 }; // Variable for reading the pushbutton status
 int buttonPState[N_BUTTONS] = { 0 }; // Variable for reading the pushbutton status
