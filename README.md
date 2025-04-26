@@ -13,7 +13,10 @@ Una solución alternativa es utilizar el software [Hairless MIDI](https://projec
 
 ### Hardware
 
-1. **Placa Arduino**: Leonardo, Micro o Pro Micro (chip ATmega32U4).
+1. **Placa Arduino**: Leonardo, Micro o Pro Micro (chip ATmega32U4) o Arduino UNO (chip ATmega328P).
+   - **ATmega32U4**: Recomendado para un controlador MIDI USB directo.
+   - **ATmega328P**: Requiere un chip adicional para la comunicación USB o el uso de Hairless MIDI.
+
 2. **Potenciómetros lineales de 10k ohms (B10k)**: Dependiendo del modelo que elijas (1, 3 o más).
 3. **Botones pulsadores sin retención**: Según el modelo (1, 3 o más).
 4. **Cables de conexión (tipo Dupont)**: Para realizar las conexiones entre los componentes y la placa.
