@@ -18,8 +18,11 @@ Una solución alternativa es utilizar el software [Hairless MIDI](https://projec
    - **ATmega328P**: Requiere un chip adicional para la comunicación USB o el uso de Hairless MIDI.
 
 2. **Potenciómetros lineales de 10k ohms (B10k)**: Dependiendo del modelo que elijas (1, 3 o más).
+![potenciómetro](/ARDUINO_MIDI_CONTROLLER/images/pot.jpg)
 3. **Botones pulsadores sin retención**: Según el modelo (1, 3 o más).
+![botón](/ARDUINO_MIDI_CONTROLLER/images/buttons.jpg)
 4. **Cables de conexión (tipo Dupont)**: Para realizar las conexiones entre los componentes y la placa.
+![dupont](/ARDUINO_MIDI_CONTROLLER/images/dupont.png)
 5. **Protoboard**: Opcional, para facilitar las conexiones.
 6. **Cable USB**: Para conectar la placa Arduino al ordenador.
 
