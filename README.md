@@ -1,9 +1,13 @@
-# Implementación de un Controlador MIDI USB con Arduino (chip ATmega32U4)
+# Implementación de un Controlador MIDI USB con Arduino 
 
-Este documento describe paso a paso cómo implementar un controlador MIDI utilizando una placa Arduino basada en el chip ATmega32U4 (Leonardo, Micro o Pro Micro).
+Este documento describe paso a paso cómo implementar un controlador MIDI utilizando una placa Arduino basada en el chip ATmega32U4 (Leonardo, Micro o Pro Micro) o ATmega328p (Arduino UNO, Arduino Mini).
 Este controlador MIDI puede enviar mensajes MIDI a través de USB, permitiendo controlar software musical o dispositivos compatibles con MIDI.
 
 El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a su capacidad integrada de comunicación USB nativa, lo que elimina la necesidad de chips adicionales para la interfaz USB. Esto permite que las placas basadas en este chip, como Arduino Leonardo, Micro y Pro Micro, sean reconocidas directamente como dispositivos MIDI por el sistema operativo, simplificando la implementación. Además, su soporte para múltiples pines analógicos y digitales facilita la conexión de potenciómetros, botones y otros componentes, mientras que su compatibilidad con el entorno Arduino IDE y librerías como MIDIUSB agiliza el desarrollo y personalización del código.
+
+El chip ATmega328P, utilizado en placas como Arduino UNO, no tiene soporte nativo para USB, lo que requiere un chip adicional (como el ATmega16U2) para la comunicación USB. Esto puede complicar la implementación de un controlador MIDI USB y limitar la flexibilidad en la conexión de componentes.
+
+Una solución alternativa es utilizar el software [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) para convertir la comunicación serie de un Arduino UNO en mensajes MIDI.
 
 ## Requisitos
 
@@ -71,6 +75,12 @@ El siguiente esquema muestra el pinout del Arduino Pro Micro, útil para identif
 
 ![Pinout del Arduino Pro Micro](/ARDUINO_MIDI_CONTROLLER/images/arduino_ProMicro_pinout.jpg)
 
+---
+
+## Pinout del Arduino UNO Rev. 3
+
+![Pinout del Arduino UNO Rev. 3](/ARDUINO_MIDI_CONTROLLER/images/Pinout-UNOrev3.png)
+
 Utiliza este esquema como referencia para conectar correctamente los potenciómetros y botones a los pines de la placa.
 
 ---
@@ -78,9 +88,9 @@ Utiliza este esquema como referencia para conectar correctamente los potencióme
 ## Paso 3: Carga del Código
 
 1. Abre el archivo de código correspondiente en el Arduino IDE:
-   - Para un controlador con 3 potenciómetros: `MIDI_CONTROLLER_(3_pots).ino`.
-   - Para un controlador con 3 botones: `MIDI_CONTROLLER_(3_buttons).ino`.
-   - Para un controlador con 3 potenciómetros y 3 botones: `MIDI_CONTROLLER_(3_pots_3_buttons).ino`.
+   - Para un controlador con 3 potenciómetros: `3_pots.ino`.
+   - Para un controlador con 3 botones: `3_buttons.ino`.
+   - Para un controlador con 3 potenciómetros y 3 botones: `3_pots_3_buttons.ino`.
 2. Conecta tu placa Arduino al ordenador mediante un cable USB.
 3. Selecciona el puerto USB de tu placa en **Herramientas > Puerto**. Habitualmente seleccionaremos *Arduino Leonardo*.
 4. Haz clic en el botón de **Subir** para cargar el código en la placa.
