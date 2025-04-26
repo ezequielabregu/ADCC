@@ -3,9 +3,9 @@
 Este documento describe paso a paso cómo implementar un controlador MIDI utilizando una placa Arduino basada en el chip ATmega32U4 (Leonardo, Micro o Pro Micro) o ATmega328p (Arduino UNO, Arduino Mini).
 Este controlador MIDI puede enviar mensajes MIDI a través de USB, permitiendo controlar software musical o dispositivos compatibles con MIDI.
 
-El chip ATmega32u4 es ideal para el desarrollo de dispositivos MIDI USB debido a su capacidad integrada de comunicación USB nativa, lo que elimina la necesidad de chips adicionales para la interfaz USB. Esto permite que las placas basadas en este chip, como Arduino Leonardo, Micro y Pro Micro, sean reconocidas directamente como dispositivos MIDI por el sistema operativo, simplificando la implementación. Además, su soporte para múltiples pines analógicos y digitales facilita la conexión de potenciómetros, botones y otros componentes, mientras que su compatibilidad con el entorno Arduino IDE y librerías como MIDIUSB agiliza el desarrollo y personalización del código.
+El chip `ATmega32u4` es ideal para el desarrollo de dispositivos MIDI USB debido a su capacidad integrada de comunicación USB nativa, lo que elimina la necesidad de chips adicionales para la interfaz USB. Esto permite que las placas basadas en este chip, como Arduino Leonardo, Micro y Pro Micro, sean reconocidas directamente como dispositivos MIDI por el sistema operativo, simplificando la implementación. Además, su soporte para múltiples pines analógicos y digitales facilita la conexión de potenciómetros, botones y otros componentes, mientras que su compatibilidad con el entorno Arduino IDE y librerías como MIDIUSB agiliza el desarrollo y personalización del código.
 
-El chip ATmega328P, utilizado en placas como Arduino UNO, no tiene soporte nativo para USB, lo que requiere un chip adicional (como el ATmega16U2) para la comunicación USB. Esto puede complicar la implementación de un controlador MIDI USB y limitar la flexibilidad en la conexión de componentes.
+El chip `ATmega328P`, utilizado en placas como Arduino UNO, no tiene soporte nativo para USB, lo que requiere un chip adicional (como el ATmega16U2) para la comunicación USB. Esto puede complicar la implementación de un controlador MIDI USB y limitar la flexibilidad en la conexión de componentes.
 
 Una solución alternativa es utilizar el software [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) para convertir la comunicación serie de un Arduino UNO en mensajes MIDI.
 
@@ -23,7 +23,12 @@ Una solución alternativa es utilizar el software [Hairless MIDI](https://projec
 ### Software
 
 1. **Arduino IDE**: Descárgalo desde [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
-2. **Librería MIDIUSB** (Gary Grewal): Necesaria para enviar mensajes MIDI a través de USB.
+2. **Librerías de Arduino**:
+   1. **Leonardo, Micro o ProMicro**
+      1. Librería `MIDIUSB` (Gary Grewal)
+   2. **Arduino UNO**
+      1. Librería `MIDI` (FortySevenEffects)
+      2. [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) (opcional, para convertir la comunicación serie en mensajes MIDI).
 
 ---
 
