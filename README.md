@@ -7,7 +7,7 @@ El chip `ATmega32u4` es ideal para el desarrollo de dispositivos MIDI USB debido
 
 El chip `ATmega328P`, utilizado en placas como Arduino UNO, no tiene soporte nativo para USB, lo que requiere un chip adicional (como el ATmega16U2) para la comunicación USB. Esto puede complicar la implementación de un controlador MIDI USB y limitar la flexibilidad en la conexión de componentes.
 
-Una solución alternativa es utilizar el software [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) para convertir la comunicación serie de un Arduino UNO en mensajes MIDI.
+Una solución alternativa es utilizar el software [EA Serial MIDI Bridge](https://github.com/ezequielabregu/EA-serialmidi-bridge/releases) o  [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) para convertir la comunicación serie de un Arduino UNO en mensajes MIDI.
 
 ## Requisitos
 
