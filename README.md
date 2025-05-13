@@ -34,7 +34,9 @@ Una solución alternativa es utilizar el software [Hairless MIDI](https://projec
       1. Librería `MIDIUSB` (Gary Grewal)
    2. **Arduino UNO**
       1. Librería `MIDI` (FortySevenEffects)
-      2. [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) (opcional, para convertir la comunicación serie en mensajes MIDI).
+      2. Serial to MIDI bridge (solo para ATmega328P)
+         1. [EA Serial MIDI Bridge](https://github.com/ezequielabregu/EA-serialmidi-bridge/releases)
+         2. [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/)
 
 ---
 
